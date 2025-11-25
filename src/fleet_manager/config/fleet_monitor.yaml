@@ -1,0 +1,11 @@
+# ============================================
+# FLEET MONITOR CONFIGURATION
+# ============================================
+# Central monitoring station settings
+
+fleet_monitor:
+  ros__parameters:
+    monitor_rate: 2.0                      # Check fleet status 2x per second
+    alert_on_low_battery: true             # Enable battery warnings
+    alert_on_errors: true                  # Enable error alerts
+    low_battery_fleet_threshold: 30.0      # Warn when any robot below 30%

@@ -1,0 +1,17 @@
+# ============================================
+# SCOUT ROBOT CONFIGURATION
+# ============================================
+# Fast, agile robots for reconnaissance
+# - High speed capability
+# - Higher power consumption
+# - Frequent status updates
+
+robot_simulator:
+  ros__parameters:
+    robot_type: "scout"
+    initial_battery: 100.0
+    max_speed: 3.5              # Fast for quick recon missions
+    battery_drain_rate: 0.8      # Higher drain due to speed
+    publish_rate: 2.0            # Fast updates for monitoring
+    low_battery_threshold: 35.0
+    critical_battery_threshold: 15.0

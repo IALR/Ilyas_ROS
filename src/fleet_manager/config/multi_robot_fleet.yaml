@@ -1,0 +1,57 @@
+# ============================================
+# MULTI-ROBOT FLEET CONFIGURATION
+# ============================================
+# Defines configuration for 3 robots of different types
+# Each robot gets its own namespace
+
+# ============================================
+# ROBOT ALPHA - Scout
+# ============================================
+robot_alpha:
+  robot_simulator:
+    ros__parameters:
+      robot_type: "scout"
+      initial_battery: 95.0           # Starting at 95% (was deployed)
+      max_speed: 3.5
+      battery_drain_rate: 0.8
+      publish_rate: 2.0
+      low_battery_threshold: 35.0
+      critical_battery_threshold: 15.0
+
+# ============================================
+# ROBOT BETA - Transporter
+# ============================================
+robot_beta:
+  robot_simulator:
+    ros__parameters:
+      robot_type: "transporter"
+      initial_battery: 100.0          # Fully charged
+      max_speed: 1.5
+      battery_drain_rate: 1.2
+      publish_rate: 1.0
+      low_battery_threshold: 40.0
+      critical_battery_threshold: 20.0
+
+# ============================================
+# ROBOT GAMMA - Cleaner
+# ============================================
+robot_gamma:
+  robot_simulator:
+    ros__parameters:
+      robot_type: "cleaner"
+      initial_battery: 80.0           # Mid-way through shift
+      max_speed: 1.0
+      battery_drain_rate: 0.3
+      publish_rate: 0.5
+      low_battery_threshold: 25.0
+      critical_battery_threshold: 10.0
+
+# ============================================
+# FLEET MONITOR
+# ============================================
+fleet_monitor:
+  ros__parameters:
+    monitor_rate: 1.0                 # Check every second
+    alert_on_low_battery: true
+    alert_on_errors: true
+    low_battery_fleet_threshold: 30.0

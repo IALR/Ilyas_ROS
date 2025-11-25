@@ -1,0 +1,17 @@
+# ============================================
+# CLEANER ROBOT CONFIGURATION
+# ============================================
+# Efficient cleaning robots
+# - Slow and methodical
+# - Energy efficient
+# - Doesn't need frequent updates
+
+robot_simulator:
+  ros__parameters:
+    robot_type: "cleaner"
+    initial_battery: 100.0
+    max_speed: 1.0               # Slow, thorough cleaning
+    battery_drain_rate: 0.3       # Most efficient
+    publish_rate: 0.5             # Slow updates OK - not critical
+    low_battery_threshold: 25.0   # Can tolerate lower battery
+    critical_battery_threshold: 10.0

@@ -1,0 +1,17 @@
+# ============================================
+# TRANSPORTER ROBOT CONFIGURATION
+# ============================================
+# Heavy-duty robots for carrying loads
+# - Slower but powerful
+# - Heavy power consumption
+# - Conservative battery management
+
+robot_simulator:
+  ros__parameters:
+    robot_type: "transporter"
+    initial_battery: 100.0
+    max_speed: 1.5               # Slower due to heavy loads
+    battery_drain_rate: 1.2       # Highest drain - heavy motors
+    publish_rate: 1.0             # Moderate updates sufficient
+    low_battery_threshold: 40.0   # Conservative - can't strand with load
+    critical_battery_threshold: 20.0

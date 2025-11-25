@@ -1,0 +1,6 @@
+# Configuration for outdoor temperature sensor
+temp_publisher:
+  ros__parameters:
+    sensor_id: "outdoor_sensor"
+    publish_rate: 2.0
+    base_temperature: 15.0

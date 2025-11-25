@@ -1,0 +1,6 @@
+# Configuration for indoor temperature sensor
+temp_publisher:
+  ros__parameters:
+    sensor_id: "indoor_sensor"
+    publish_rate: 1.0
+    base_temperature: 22.0
